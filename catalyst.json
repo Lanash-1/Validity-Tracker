@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "source": "functions",
+    "targets": ["api", "reminders-cron"],
+    "ignore": ["node_modules", "src", "test", "*.test.js"]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "validity-tracker",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Track the validity of products, consumables, offers and anything else that expires.",
+  "packageManager": "pnpm@10.28.0",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build:shared": "pnpm --filter @vt/shared build",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "lint": "pnpm -r --if-present lint",
+    "test": "pnpm -r --if-present test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3"
+  }
+}

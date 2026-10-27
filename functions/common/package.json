@@ -1,0 +1,22 @@
+{
+  "name": "@vt/fn-common",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Code shared by the Catalyst functions: config, repositories, push delivery, reminder engine.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@vt/shared": "workspace:*",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/web-push": "^3.6.4",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.5",
+    "zcatalyst-sdk-node": "^3.4.0"
+  }
+}

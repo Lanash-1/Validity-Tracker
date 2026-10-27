@@ -1,0 +1,23 @@
+{
+  "name": "reminders-cron",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hourly reminder sweep (Catalyst Cron function)",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/bundle.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "zcatalyst-sdk-node": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vt/fn-common": "workspace:*",
+    "@vt/shared": "workspace:*",
+    "esbuild": "^0.27.0",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.5"
+  }
+}
