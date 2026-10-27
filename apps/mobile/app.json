@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Validity Tracker",
+    "slug": "validity-tracker",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "vt",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "android": {
+      "package": "com.validitytracker.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0F766E",
+        "foregroundImage": "./assets/images/adaptive-icon.png"
+      },
+      "permissions": ["android.permission.CAMERA", "android.permission.POST_NOTIFICATIONS"],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [{ "scheme": "https", "host": "*.catalystserverless.com", "pathPrefix": "/join" }],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "web": {
+      "output": "static",
+      "bundler": "metro",
+      "favicon": "./assets/images/favicon.png",
+      "name": "Validity Tracker",
+      "shortName": "Validity",
+      "themeColor": "#0F766E",
+      "backgroundColor": "#F8FAFC"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        { "backgroundColor": "#0F766E", "image": "./assets/images/splash-icon.png", "imageWidth": 160 }
+      ],
+      [
+        "expo-camera",
+        { "cameraPermission": "Allow Validity Tracker to scan product barcodes." }
+      ],
+      [
+        "expo-image-picker",
+        { "photosPermission": "Allow Validity Tracker to attach product photos." }
+      ],
+      [
+        "expo-notifications",
+        { "icon": "./assets/images/notification-icon.png", "color": "#0F766E", "defaultChannel": "expiry-reminders" }
+      ],
+      "expo-secure-store",
+      "@react-native-google-signin/google-signin"
+    ],
+    "experiments": { "typedRoutes": false },
+    "extra": {
+      "eas": { "projectId": "" }
+    }
+  }
+}

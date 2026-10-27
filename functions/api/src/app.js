@@ -39,6 +39,8 @@ export function buildApp(opts) {
         // Same-origin / native requests have no Origin header.
         if (!origin || config.corsOrigins.includes(origin) || origin.startsWith('chrome-extension://'))
           return cb(null, true);
+        // Local development: any localhost / LAN origin (Expo web dev server picks random ports).
+        if (config.isDev && /^https?:\/\/(localhost|127\.0\.0\.1|10\.|192\.168\.)/.test(origin)) return cb(null, true);
         cb(null, false);
       },
       credentials: false,
