@@ -1,0 +1,30 @@
+{
+  "name": "extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Validity Tracker browser extension: save offers and expiry dates from any web page.",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "postinstall": "wxt prepare",
+    "typecheck": "wxt prepare && tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@vt/shared": "workspace:*",
+    "chrono-node": "^2.10.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.6",
+    "@types/react": "~19.3.0",
+    "@types/react-dom": "~19.3.0",
+    "@wxt-dev/module-react": "^1.2.2",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.5",
+    "wxt": "^0.21.5"
+  }
+}

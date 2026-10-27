@@ -4,11 +4,17 @@
   "version": "0.1.0",
   "description": "Track the validity of products, consumables, offers and anything else that expires.",
   "packageManager": "pnpm@10.28.0",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
+    "dev:api": "pnpm --filter api dev",
+    "dev:web": "pnpm --filter mobile web",
+    "dev:android": "pnpm --filter mobile android",
+    "dev:extension": "pnpm --filter extension dev",
+    "build": "pnpm -r --if-present build",
     "build:shared": "pnpm --filter @vt/shared build",
     "typecheck": "pnpm -r --if-present typecheck",
-    "lint": "pnpm -r --if-present lint",
     "test": "pnpm -r --if-present test",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
